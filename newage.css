@@ -1,0 +1,810 @@
+*{
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: calibri;
+  margin: 0px;
+ 
+}
+body{
+    border: solid 5px red;
+}
+
+.firstlink {display: flex; flex-direction: row;gap: 2rem;  justify-content: right; background-color: black;padding:1rem 2rem ;
+ }
+.firstlink a{text-decoration: none; color: white; }
+   
+.logo{max-width: 10rem; width: 100%;}
+.firstsection{color:  white;   
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('assets/bgimg.jpg');background-size: cover; background-position: right; height: 100%;
+}
+.firstsectionabout{color:  white;   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('assets/push.jpg');background-size: cover; background-position: center; height: 70vh;
+}
+.topandnav{display: flex; flex-direction: row;  align-items: center; justify-content:space-between;
+    padding: 1rem 2rem; }
+.topandnav a {margin: 1rem, 0.5rem ; text-decoration: none;color: red; transition: 1s;padding: 1rem; border-radius: 30px; font-weight: bold;}
+.topnav{
+    background-color: aliceblue; 
+    padding: 1rem; opacity: 0.5;
+}
+.topandnav a:hover{background-color: rgb(83, 64, 64); cursor: pointer;
+    color: aliceblue; }
+    .topandnav a.active{background-color: rgb(225, 15, 15); cursor: pointer;color: aliceblue; }
+
+.hero{ margin-top: 8rem;
+    
+    padding:3rem; 
+    text-align: left;
+}
+  .hero h1{font-family: Arial, Helvetica, sans-serif; font-size: 5rem; }
+  .hero button{padding: 1rem;background-color: red;font-size: 1.5rem; color: white; font-weight: bold; transition: 3s;
+}
+  .hero button:hover{background-color: antiquewhite; 
+    cursor: pointer; 
+    color:black;
+}
+  .heroclass{
+    display:flex; 
+    flex-wrap: wrap;
+    margin: 1rem;gap:3rem;  
+    font-size: 1.5rem;
+  
+}
+.header{
+    text-align: center;
+    margin-top: 5rem;
+    color:red;
+}
+ .heroclass span{
+    font-size:3rem; color:red;
+ }
+.bmisection{display:flex;  
+    flex-direction: column; 
+    background-color: black;
+    align-items: center; 
+    justify-content: center;
+    gap: 2rem; padding:5rem; 
+}
+.bmisection h2{font-family: Verdana; color: red;}
+#calcbmi button{padding: 0.5rem; background-color: burlywood; font-weight: bold;width:12rem;}
+#calcbmi button:hover{cursor: pointer;}
+.result{display:flex; gap:0.5rem;align-items: baseline; justify-content: center;}
+#calcbmi input{width:10rem; padding: 0.5rem;font-weight: bold;font-size: 1.2rem;background-color: beige; }
+#sex{width: 10rem; padding: 0.5rem;font-weight: bold;
+    background-color: beige;
+    font-size: 1.2rem;
+    color:rgb(110, 107, 107)}
+
+.inputfields{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#calcbmi{display:flex;flex-direction:
+     column; gap: 2rem;
+    margin-bottom: 2rem; 
+    align-items: center;
+    justify-content: center;
+}
+.section1{display:flex; flex-direction: column; align-items: center; margin-top: 4rem;
+}
+.workprocess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color:red;
+   
+    margin-bottom: 2rem;
+      
+}
+.workprocess::before,
+.workprocess::after{
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: red;
+}
+.goalscontainer{max-width: 60rem; width: 100%; display:flex; flex-wrap: wrap;justify-content: space-around; margin-top: 3rem; gap:2rem;}
+
+
+
+.goalscard{display:flex;flex-direction: column; max-width: 12rem; width: 100%; gap: 2rem;}
+.goalscard img{max-width: 12rem; width: 100%;max-height: 12rem; height: 100%; border-radius: 10rem;box-shadow: 0 0 25px rgb(48, 45, 45,100);}
+.largeimg{display: flex;flex-direction: column; align-items: center; margin-top:10rem; }
+.largeimg img{max-width: 60rem; width: 100%;}
+
+.section2{ display:flex;flex-direction: column;align-items: center;  margin-top: 10rem;
+}
+.classcontainer{display: flex;
+    margin: 2rem; justify-content: center;}
+.secion21{display: flex;flex-direction: column;
+ padding:2rem;
+gap: 1rem;   }
+.secion21 button{padding: 1rem;background-color: red;font-size: 1.5rem; color: white; font-weight: bold; width: 14rem; transition: 1s; box-shadow: 0 0 10px rgba(27, 26, 26, 0.5); border:none;}
+.secion21 button:hover{background-color: antiquewhite; cursor: pointer; color:black;}
+.section22 img{
+    width: 100%; 
+    max-width: 50rem;
+}
+
+.homecontact{display: flex; flex-direction: column; width: 100%; max-width: 25rem;padding: 2rem; background-color: rgb(153, 26, 21) ; font-size: 18px; gap: 1rem; color:white;}
+.firstcontact{display: flex; flex-direction: column;
+font-size: 16px; color:white;
+
+}
+.firstcontact input{height: 2.5rem;margin-bottom: 1rem; padding: 1rem;font-size: 1.1rem; margin-top: 0.2rem;background-color: beige;
+border: none;}
+.firstcontact textarea{min-width: 21rem; min-height:8rem;max-width: 21rem; max-height:8rem; margin-bottom: 1rem;
+padding: 1rem; font-size: 1.1rem;margin-top: 0.2rem;
+background-color: beige;border: none;}
+.firstcontact button{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 2s; 
+    border:none;
+}
+.hamburger{
+    display: none; 
+    flex-direction: column; 
+    gap: 0.5rem; 
+    cursor: pointer;}
+.hamburger div{
+    width: 2rem; 
+    height: 0.2rem; 
+    background-color: red;
+}
+
+.hamburger.active div:nth-child(1){
+    transform:rotate(45deg) translateY(12px);
+}
+
+.hamburger.active div:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active div:nth-child(3){
+    transform:rotate(-45deg) translateY(-12px);
+}
+
+.firstcontact button:hover{background-color: antiquewhite; cursor: pointer; color:black;}
+.contactmapcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(150px);
+}
+footer{background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('assets/darkbackground2.jpg');position: center;background-size: cover; padding: 2rem; padding-top: 15rem; display: flex;
+gap: 8rem;
+justify-content: center; 
+ 
+
+}
+.firstfooter{display: flex; 
+flex-direction: column;
+width: 10rem;
+ color: white;}
+ .firstfooter a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-top: 1rem;
+    color: white;
+    transition: transform 0.3s ease;
+ }
+ .firstfooter a:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color: brown;
+ }
+.firstfooter h3, .lastfooter h3{ color: red;
+text-decoration: underline;
+text-decoration-color: white;
+
+
+}
+.lastfooter{display: flex;
+flex-direction: column; gap: 1rem;}
+.footimg img{ width: 6rem; height: 6rem; border-radius: 20%; margin-top: 1rem;}
+
+.footimg{display: grid;
+grid-template-columns: repeat(2,1fr);
+gap:2rem;
+}
+.footimg :hover{transform: scale(1.2); transition: 0.3s ease; cursor: pointer;}
+.lastline{
+    background-color: rgb(103, 14, 11);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    color:white;
+    font-weight: bold;
+}
+.lastline img{max-width: 4rem; width: 100%; }
+.section2about{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:10rem 0;
+        background-image: url(assets/darkbackgrund.jpg);
+
+    }
+.section2aboutimg{
+    display: flex;
+    gap:0.5rem;
+    max-width: 40rem;
+    width: 100%;
+    height: 100%;
+    max-height: 40rem;
+    
+}
+.section2aboutimg img{
+    width: 100%;
+    height: 100%;
+    max-width: 15rem;
+    max-height: 40rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.section2about p{
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: white;
+    
+}
+.aboutcontent{
+    max-width:30rem ;
+    width: 100%;
+    padding: 2rem;
+   text-align: justify;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.aboutcontent h1{
+    color: red;
+}
+.map{
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+
+.sponsorsarea h1{
+   text-align: center;
+   margin-top: 5rem;
+   color:red;
+}
+.sponsorscontainer{
+    background-color: rgb(103, 14, 11);
+    margin: 3rem 0;
+}
+.sponsorscard{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+
+}
+.sponsorscard img{
+    background-color: white;
+    padding: 2rem;
+    max-width: 10rem;
+    width: 100%;
+    height: 100%;
+    height: 10rem;
+        transition: 0.5s ease;
+
+}
+.sponsorscard img:hover{    transition: 0.5s ease;
+        transform: scale(1.1);
+
+
+}
+.section1about{
+    padding: 5rem;
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.section1about img{
+    max-width: 30rem;
+    width: 100%;
+    height: 100%;
+    max-height: 40rem;
+    border-radius: 2rem;
+        transition: 0.5s ease;
+
+}
+.section1about img:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+
+}
+.section1aboutcontent{
+    display:flex;
+    flex-direction: column;
+    max-width: 25rem;
+
+}
+.section1aboutcontent h1{
+    color: red;
+    margin-bottom: 1rem;
+}
+.section1aboutcontent h3{
+    margin-top: 3rem;
+    text-decoration: underline;
+}
+.section1aboutcontent p{
+    line-height: 1.5;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.classection{
+    display: flex;
+    flex-wrap: wrap;
+padding: 5rem 0;  
+background-color: aliceblue;
+justify-content: space-evenly;
+
+}
+.classcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 2rem;
+    max-width: 18rem;
+    width: 100%;
+    max-height: 25rem;
+    height: 100%;
+    background-color: white;
+    border-radius: 2rem;
+
+}
+.classcard img{
+    max-width: 15rem;
+    width: 100%;
+    height: 10rem;
+    border-radius: 2rem;
+        transition: 0.5s ease;
+
+}
+.classcard img:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+
+}
+.classcard button{
+    padding: 0.7rem;
+    border: none;
+    color:white;
+    background-color: rgb(124, 45, 25);
+    border-radius: 1rem;
+        transition:0.5s ease;
+
+}
+.classcard button:hover{
+    padding: 0.7rem;
+    background-color: rgb(16, 15, 15);
+    cursor:pointer;
+}
+
+
+
+
+
+
+.contactHero{
+
+height:55vh;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("assets/darkbackgrund.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+.heroContent h1{
+
+font-size:4rem;
+
+margin-bottom:20px;
+
+}
+
+.heroContent p{
+
+font-size:1.2rem;
+
+max-width:650px;
+
+}
+#bmidescription{
+    background-color: rgb(103, 14, 11);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.contactCards{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+padding:70px 10%;
+
+background:#fafafa;
+
+}
+
+.contactCard{
+
+background:white;
+
+padding:40px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.contactCard:hover{
+
+transform:translateY(-10px);
+
+}
+
+.contactCard h2{
+
+font-size:45px;
+
+margin-bottom:15px;
+
+color:red;
+
+}
+
+.contactContainer{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+padding:100px 10%;
+
+}
+
+.contactInfo img{
+
+width:100%;
+
+border-radius:20px;
+
+margin-top:25px;
+
+}
+
+.contactForm{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.inputRow{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.inputRow input{
+
+flex:1;
+
+padding:18px;
+
+font-size:16px;
+
+}
+
+textarea{
+
+height:220px;
+
+padding:20px;
+
+resize:none;
+
+font-size:16px;
+
+}
+
+.contactForm button{
+
+padding:18px;
+
+background:red;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+border:none;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.contactForm button:hover{
+
+background:black;
+
+}
+
+.teamSection{
+
+background:#111;
+
+padding:100px 10%;
+
+text-align:center;
+
+color:white;
+
+}
+
+.teamCards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.teamCard{
+
+background:#1d1d1d;
+
+padding:30px;
+
+border-radius:15px;
+
+}
+
+.teamCard img{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:20px;
+
+}
+
+.teamCard h3{
+
+color:red;
+
+}
+
+.mapSection iframe{
+
+width:100%;
+
+height:500px;
+
+border:none;
+
+}
+@media (max-width: 945px) {
+
+footer{
+gap: 2rem;
+
+ 
+
+}
+    
+}
+
+@media(max-width:900px){
+
+.contactCards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.contactContainer{
+
+grid-template-columns:1fr;
+
+}
+
+.inputRow{
+
+flex-direction:column;
+
+}
+
+.teamCards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+@media (max-width:700px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+   
+   
+.sponsorscard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+}
+
+.sponsorscontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+.classcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.secion21{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.topandnav {
+    position: relative;
+}
+.topnav {
+        display: none;
+        position: absolute;
+        opacity: 1;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: black;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .topnav.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+}
+    
+
+@media(max-width:600px){
+    .hero h1{
+        font-size: 3rem;
+
+    }
+    .section2aboutimg{
+    
+    max-width: 30rem;
+    width: 100%;
+    height: 100%;
+    max-height: 30rem;
+    
+}
+.section1about{
+    padding: 2rem;
+   
+}
+.inputfields{
+   
+    gap: 1rem;
+    
+}
+#calcbmi input{width:6rem; padding: 0.5rem;font-size: 1rem; }
+.section2aboutimg img{
+    width: 100%;
+    height: 100%;
+    max-width: 10rem;
+    max-height: 30rem;
+  
+}
+#calcbmi button{width:10rem;}
+#sex{width:6rem; padding: 0.5rem;font-size: 1rem; }
+.section22 img{
+    width: 100%; 
+    max-width: 25rem;
+}
+.bmisection{text-align: center; gap: 2rem; padding:5rem 2rem; 
+}
+.contactCards{
+
+grid-template-columns:1fr;
+
+}
+
+.heroContent h1{
+
+font-size:2.8rem;
+
+}
+.secion21 button{font-size: 1rem; width: 10rem; padding: 0.5rem;}
+
+}
+@media (max-width: 400px) 
+  {
+    .secion21 button{ width: 8rem;
+    }
+ .section22 img{
+    width: 100%; 
+    max-width: 20rem;
+}
+.firstcontact textarea{min-width: 10rem; max-width: 20rem; }
+    
+}   

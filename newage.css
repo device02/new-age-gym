@@ -225,6 +225,46 @@ gap:2rem;
     color:white;
     font-weight: bold;
 }
+
+.load {
+    opacity: 0;
+    transform: translateX(250px);
+    animation: loadUp 3.5s ease forwards;
+}
+
+@keyframes loadUp {
+    from {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scrolls {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.scrolls.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.flip {
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.flip.active {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
 .lastline img{max-width: 4rem; width: 100%; }
 .section2about{
     display: flex;

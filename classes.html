@@ -40,45 +40,103 @@
        </section>
     </header>
    
-    <section class="classection">
+    <section class="classection " >
+        <div class="classcontainer  " id="classcontainer">
         
-        <div class="classcard">
+        <div class="classcard scrolls">
             <img src="assets/group1.jpg">
             <h3>Weight Loss</h3>
             <p>Begin with a thorough assessment of your current fitness level considering factors like stenght and flexibility</p>
-            <button>Click Here To Register</button>
+            <button id="weightlossbtn" >Click Here To Register</button>
 
 
         </div>
-            <div class="classcard">
+            <div class="classcard scrolls">
             <img src="assets/group2.jpg">
             <h3>Martial Art</h3>
             <p>Begin with a thorough assessment of your current fitness level considering factors like stenght and flexibility</p>
-            <button>Click Here To Register</button>
+            <button id="martialartsbtn" >Click Here To Register</button>
 
         </div>
-          <div class="classcard">
+          <div class="classcard scrolls">
             <img src="assets/group1.jpg">
             <h3>Meditation & Yoga</h3>
             <p>Begin with a thorough assessment of your current fitness level considering factors like stenght and flexibility</p>
-            <button>Click Here To Register</button>
+            <button id="yogameditationbtn" >Click Here To Register</button>
         </div>
-            <div class="classcard">
+            <div class="classcard scrolls">
             <img src="assets/group2.jpg">
             <h3>Cardio</h3>
             <p>Begin with a thorough assessment of your current fitness level considering factors like stenght and flexibility</p>
-            <button>Click Here To Register</button>
+            <button id="cardiobtn" >Click Here To Register</button>
         </div>
-        </div>
-            <div class="classcard">
-            <img src="assets/group2.jpg">
+        
+            <div class="classcard scrolls">
+            <img src="assets/boxingclass.jpg">
             <h3>Boxing</h3>
             <p>Begin with a thorough assessment of your current fitness level considering factors like stenght and flexibility</p>
-            <button>Click Here To Register</button>
+            <button id="boxingbtn" >Click Here To Register</button>
+        </div>
         </div>
     </section>
 
+<dialog class="registermembership">
+            <h2>Register Membership</h2>
+    <section class="registercontainer">
+     <aside class="memberaside">
+        <img src="assets/gym2logo-removebg-preview.png" alt="newage gym logo">
+        <h1 id="memberh1">SIGNUP</h1>
+       
+    </aside>
+    <button type="button" class="closemodal" onclick="closeModal()">&times;</button>
+    <form id="registerform">
 
+                    <input type="file" id="profileimage" style="background-color: rgb(231, 55, 55); font-weight: bold;">
+
+         <!-- <input id="class">
+               <option value="weight-loss" selected>Weight Loss</option>
+                <option value="martial-arts" >Martial Arts</option>
+                <option value="yoga-meditation" >Yoga & Meditation</option>
+                <option value="cardio">Cardio</option>
+                <option value="boxing" >Boxing</option>
+    </input>-->
+            <input type="text" id="class" placeholder="Class" readonly>
+
+        
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="John Doe" required>
+        <div class="sexanddate">
+        <div>
+        <label for="sex">Sex</label>
+        <select id="sex" required>
+            <option value="" disabled selected>Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+        </select>
+        </div>
+        <div >
+        <label for="startdate">Start Date</label>
+        <input type="date" id="startdate" placeholder="Start Date" required>
+        </div>
+        </div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+234 123 456 7899" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="sample@email.com" required>
+        <div  class="regbuttons">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="closeModal()" style="background-color: beige;color: black;" >Cancel</button>
+        </div>
+         
+        
+    </form>
+   
+</section>
+
+
+        <p class="clicktosignin">Already have an account?...
+        <a href="signin.html">Click here to sign in</a></p>
+</dialog>
 
 
 
@@ -133,7 +191,7 @@
             <P>&copy; 2025 All Rights Reserved. </P>
             <div style="display: flex; align-items: center;">
             <img src="assets/gym2logo-removebg-preview.png"> 
-            <p>NEWAGE</p>
+             <p class="lastname">NEWAGE</p>
             </div>
             <p >Powerd By: DoubleDevices</p>
         </section>

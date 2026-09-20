@@ -17,7 +17,7 @@
   url('assets/bgimg.jpg');background-size: cover; background-position: right; height: 100%;
 }
 .firstsectionabout{color:  white;   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-  url('assets/push.jpg');background-size: cover; background-position: center; height: 70vh;
+  url('assets/bg.jpg');background-size: cover; background-position: center; height: 70vh;
 }
 .topandnav{display: flex; flex-direction: row;  align-items: center; justify-content:space-between;
     padding: 1rem 2rem; }
@@ -69,10 +69,11 @@
 #calcbmi button:hover{cursor: pointer;}
 .result{display:flex; gap:0.5rem;align-items: baseline; justify-content: center;}
 #calcbmi input{width:10rem; padding: 0.5rem;font-weight: bold;font-size: 1.2rem;background-color: beige; }
-#sex{width: 10rem; padding: 0.5rem;font-weight: bold;
+#sex, #startdate{max-width: 10rem;width:100%; padding: 0.5rem;font-weight: bold;
     background-color: beige;
     font-size: 1.2rem;
     color:rgb(110, 107, 107)}
+
 
 .inputfields{
     display: flex;
@@ -117,7 +118,10 @@
 .section2{ display:flex;flex-direction: column;align-items: center;  margin-top: 10rem;
 }
 .classcontainer{display: flex;
-    margin: 2rem; justify-content: center;}
+    margin: 2rem; 
+    
+    justify-content: center;
+}
 .secion21{display: flex;flex-direction: column;
  padding:2rem;
 gap: 1rem;   }
@@ -135,6 +139,7 @@ font-size: 16px; color:white;
 }
 .firstcontact input{height: 2.5rem;margin-bottom: 1rem; padding: 1rem;font-size: 1.1rem; margin-top: 0.2rem;background-color: beige;
 border: none;}
+
 .firstcontact textarea{min-width: 21rem; min-height:8rem;max-width: 21rem; max-height:8rem; margin-bottom: 1rem;
 padding: 1rem; font-size: 1.1rem;margin-top: 0.2rem;
 background-color: beige;border: none;}
@@ -230,6 +235,7 @@ gap:2rem;
     opacity: 0;
     transform: translateX(250px);
     animation: loadUp 3.5s ease forwards;
+    
 }
 
 @keyframes loadUp {
@@ -388,25 +394,32 @@ gap:2rem;
 }
 .classection{
     display: flex;
-    flex-wrap: wrap;
-padding: 5rem 0;  
-background-color: aliceblue;
-justify-content: space-evenly;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
 
+}
+.classcontainer{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+padding: 5rem 2rem;  
+gap: 2rem;
+margin: auto;
+color: white;
 }
 .classcard{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 2rem;
     max-width: 18rem;
     width: 100%;
     max-height: 25rem;
     height: 100%;
-    background-color: white;
     border-radius: 2rem;
+    box-shadow: 0 0px 20px rgba(253, 253, 253, 0.9);
 
 }
 .classcard img{
@@ -433,8 +446,10 @@ justify-content: space-evenly;
 }
 .classcard button:hover{
     padding: 0.7rem;
-    background-color: rgb(16, 15, 15);
+    background-color: rgb(220, 192, 192);
     cursor:pointer;
+    
+    color: black;
 }
 
 
@@ -675,6 +690,12 @@ margin-bottom:20px;
 color:red;
 
 }
+.sexanddate{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+}
 
 .mapSection iframe{
 
@@ -726,6 +747,244 @@ border:none;
     text-decoration: none;
     gap: 0.2rem;
    }
+#registerform{
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    width:100%
+}
+#registerform h2{
+    margin-bottom: 1rem;
+}
+#registerform input, #registerform select, #loginform input{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+}
+#registerform button, #loginform button{
+    width:100%;
+    max-width:8rem;
+    padding: 0.5rem;
+    background-color: red;
+    border: none;
+    border-radius: 0.5rem;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.regbuttons{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.clicktosignin{
+    margin-top: 1rem;
+    color: white;
+}
+.clicktosignin a{
+    color: red;
+    cursor: pointer;
+}
+.registermembership{
+   flex-direction: column;
+    justify-content: center;
+  
+
+   color: red;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    gap: 2rem;
+    border-radius: 0.5rem;
+        max-width: 60rem;
+        width: 100%;
+    margin: auto;
+    border: none;
+    padding:2rem;
+ background: linear-gradient(rgb(50, 30, 30), rgba(0, 0, 0));
+  
+     opacity: 0;
+    transform: scale(0.7) translateY(30px);
+    transition:
+        opacity 1s ease,
+        transform 0.4s ease;
+}
+
+.registermembership[open] {
+    display: flex;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+.registercontainer{
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.memberaside img{
+    max-width: 20rem;
+    width: 100%;
+}
+@starting-style {
+    .registermembership[open] {
+        opacity: 0;
+        transform: scale(0.7) translateY(30px);
+    }
+}
+.memberaside{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    gap: 1rem;
+    color:white;
+    background-color: rgba(23, 22, 22, 0.5);
+    box-shadow: 1px 0 10px rgba(226, 223, 223, 0.9);
+    border-radius: 100%;
+    text-align:center;
+
+ animation: whatsappPulse 1.8s infinite;
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(226, 163, 140, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 18px rgba(102, 104, 103, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+
+}
+
+.closemodal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    background: none;
+    border: none;
+    color: white;
+
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    width: auto;
+    padding: 0;
+}
+
+.memberaside h1{
+    font-size: 3rem;
+    text-shadow: #1d1d1d;
+}
+
+
+/* WhatsApp Button Styles 
+
+
+   .whatsapp-btn {
+    position: fixed;
+    right: 55px;
+    bottom: 130px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background-color: #25D366;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+    animation: whatsappPulse 1.8s infinite;
+}
+
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+
+}
+
+
+
+*/
+
+
+.loginsection{
+    display:flex;
+    padding: 5rem auto;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url('assets/gymmanagement3.png');background-size: cover; background-position: left; height: 100%;
+  
+.loginsectionimg{
+    max-width: 20rem;
+width: 100%;
+}
+    
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+
+        width: 100%;
+    margin: auto;
+    border: none;
+    padding:2rem;
+
+  
+   
+    
+}
+
+#loginform label{
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+#loginform{
+ background: linear-gradient(rgb(50, 30, 30), rgba(0, 0, 0));
+    padding:4rem;
+    color:white;
+    border-radius: 2rem;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    display:flex;
+    flex-direction: column;
+}
+#loginform button{
+    font-size: 1.2rem;
+
+}
 
 
 
@@ -768,6 +1027,11 @@ flex-direction:column;
 
 grid-template-columns:1fr;
 
+}
+.loginsectionimg{
+    
+    max-width: 20rem;
+width: 100%;
 }
 
 }
@@ -816,6 +1080,7 @@ grid-template-columns:1fr;
         background-color: black;
         padding: 2rem;
         gap: 1.5rem;
+        z-index: 1001;
     }
 
     .topnav.show {
@@ -842,6 +1107,23 @@ grid-template-columns:1fr;
     height: 100%;
     max-height: 30rem;
     
+}
+.registermembership, .registercontainer{
+    flex-direction: column;
+    gap: 0.5rem;
+   
+}
+.memberaside img{
+    display: none;
+}
+.memberaside h1{
+    font-size: 2rem;
+}
+.memberaside{
+   
+    padding:1rem;
+    gap: 0;
+   
 }
 .section1about{
     padding: 2rem;
@@ -899,5 +1181,8 @@ font-size:2.8rem;
     max-width: 20rem;
 }
 .firstcontact textarea{min-width: 10rem; max-width: 20rem; }
+.clicktosignin{
+    font-size: 0.9rem;
+}
     
 }   

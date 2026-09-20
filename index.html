@@ -38,7 +38,7 @@
         <div class="hero load">
             <h1>YOUR FITNESS <br>YOUR VICTORY</h1>
             <div class="heroclass">
-            <button>VIEW CLASS SCHEDULE</button>
+            <button onclick="window.location.href='classes.html'">VIEW CLASSES</button>
             <p> <span>2K+ </span>Satisfied Customers</p>
             </div>
             
@@ -52,9 +52,9 @@
 
             <form id="calcbmi">
                 <div class="inputfields">
-                <input id="weight" type="number" placeholder="Weight(KG)" required>
-                <input id="height" type="number" placeholder="Height(FT)" required>
-                <input id="age" type="number" placeholder="Age">
+                <input id="weight" type="number" placeholder="Weight(KG)" required min="1" max="200">
+                <input id="height" type="number" placeholder="Height(FT)" required min="1" max="10">
+                <input id="age" type="number" placeholder="Age" min="1" max="120">
                 <select id="sex">
                 <option value="" disabled selected>Sex</option>
                 <option value="male">Male</option>
@@ -95,6 +95,7 @@
     <img class="" src="assets/larg.jpg" loading="lazy">
 
     </section>
+    
     <section class="section2 scrolls flip" >
         <h1>Our Gym Fitness Classes</h1>
             <div class="classcontainer">
@@ -164,6 +165,8 @@
                 <input type="text" id="name" placeholder="John Doe">
                 <label for="name">Phone Number</label>
                 <input type="number" id="phonenumber" placeholder="+234 706 277 7839">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="sample@email.com">
                 <label for="how">How did you hear about us</label>
                 <input type="text" id="how">
                 <label for="note">Note</label>
@@ -230,7 +233,16 @@
                     </section>
                     <script src="newage.js"></script>
                      <div class="rightendbutton">
-    <!--  <div class="reachout">
+    
+    <!--  <a href="https://wa.me/2347022333939?text=Hello%20I%20would%20like%20to%20make%20an%20enquiry"
+   class="whatsapp-btn"
+   target="_blank">
+
+    <img src="assets/whatsapp.png" alt="WhatsApp">
+
+</a>
+
+  <div class="reachout">
     <a href="https://wa.me/2347066299546" target="_blank" class="reachout1">
     <img src="bemmyassets/whatsapp.png"><p>Whatsapp</p>
     </a>

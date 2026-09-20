@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Age Gym</title>
+    <link rel="stylesheet" href="newage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+    <header >
+        <div class="firstlink">
+            <a href="facebook.com">facebook</a>
+            <a href="instagram.com">Instagram</a>
+            <a href="x.com">Twitter</a>
+        </div>
+        <section class="firstsection">
+        <div class="topandnav">
+            <img class="logo" src="assets/gym2logo-removebg-preview.png">
+            <nav class="topnav">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="classes.html">Classes</a>
+                <a href="blog.html">Blog</a>
+                <a href="contactus.html">Contact Us</a>
+              <!--  <a class="whatsapp">whatsapp</a>-->
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <div class="span1"></div>
+                <div class="span2"></div>
+                <div class="span3"></div>
+            </div>
+            
+
+        </div>
+       
+    </header>
+    <main  class="loginsection">
+                   
+
+        
+       
+
+        <form id="loginform">
+                     <!--<img class="loginsectionimg" src="assets/gymmanagement3-removebg-preview.png">-->
+                      <img class="loginsectionimg" src="assets/gymmanagement4.png">
+
+            <label for="email">Username</label>
+            <input type="email" id="email" >
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <button type="submit">Log In</button>
+            <p style="color: rgb(246, 241, 241);" class="clicktosignin">Not a member?...
+        <a id="openmodal" onclick="openmodal()">Click here to sign up</a></p>
+        </form>
+         
+
+    </main>
+    <dialog class="registermembership">
+            <h2>Register Membership</h2>
+    <section class="registercontainer">
+     <aside class="memberaside">
+        <img src="assets/gym2logo-removebg-preview.png" alt="newage gym logo">
+        <h1 id="memberh1">SIGNUP</h1>
+       
+    </aside>
+    <button type="button" class="closemodal" onclick="closeModal()">&times;</button>
+    <form id="registerform">
+
+                    <input type="file" id="profileimage" style="background-color: rgb(231, 55, 55); font-weight: bold;">
+
+         <select id="class" type="select">
+            <option value="" disabled selected>Select Class</option>
+               <option value="weight-loss">Weight Loss</option>
+                <option value="martial-arts" >Martial Arts</option>
+                <option value="yoga-meditation" >Yoga & Meditation</option>
+                <option value="cardio">Cardio</option>
+                <option value="boxing" >Boxing</option>
+         </select>
+           
+
+        
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="John Doe" required>
+        <div class="sexanddate">
+        <div>
+        <label for="sex">Sex</label>
+        <select id="sex" required>
+            <option value="" disabled selected>Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+        </select>
+        </div>
+        <div >
+        <label for="startdate">Start Date</label>
+        <input type="date" id="startdate" placeholder="Start Date" required>
+        </div>
+        </div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+234 123 456 7899" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="sample@email.com" required>
+        <div  class="regbuttons">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="closeModal()" style="background-color: beige;color: black;" >Cancel</button>
+        </div>
+         
+        
+    </form>
+   
+</section>
+
+
+        <p class="clicktosignin">Already have an account?...
+        <a href="signin.html">Click here to sign in</a></p>
+</dialog>
+ 
+
+   
+     <section class="lastline">
+            <P>&copy; 2025 All Rights Reserved. </P>
+            <div style="display: flex; align-items: center;">
+            <img src="assets/gym2logo-removebg-preview.png"> 
+             <p class="lastname">NEWAGE</p>
+            </div>
+            <p >Powerd By: DoubleDevices</p>
+        </section>
+    <script src="newage.js"></script>
+</body>
+</html>

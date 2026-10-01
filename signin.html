@@ -51,14 +51,15 @@
             <input type="email" id="email" >
             <label for="password">Password</label>
             <input type="password" id="password">
-            <button type="submit">Log In</button>
-            <p style="color: rgb(246, 241, 241);" class="clicktosignin">Not a member?...
+<button type="button" onclick="location.href='dashboard.html'">
+    Log In
+</button>            <p style="color: rgb(246, 241, 241);" class="clicktosignin">Not a member?...
         <a id="openmodal" onclick="openmodal()">Click here to sign up</a></p>
         </form>
          
 
-    </main>
-    <dialog class="registermembership">
+        
+<dialog class="registermembership">
             <h2>Register Membership</h2>
     <section class="registercontainer">
      <aside class="memberaside">
@@ -67,27 +68,19 @@
        
     </aside>
     <button type="button" class="closemodal" onclick="closeModal()">&times;</button>
-    <form id="registerform">
+    <form id="registerationform">
 
                     <input type="file" id="profileimage" style="background-color: rgb(231, 55, 55); font-weight: bold;">
 
-         <select id="class" type="select">
-            <option value="" disabled selected>Select Class</option>
-               <option value="weight-loss">Weight Loss</option>
-                <option value="martial-arts" >Martial Arts</option>
-                <option value="yoga-meditation" >Yoga & Meditation</option>
-                <option value="cardio">Cardio</option>
-                <option value="boxing" >Boxing</option>
-         </select>
-           
+            <input type="text" id="class" placeholder="Class" readonly>
 
         
         <label for="fullname">Full Name</label>
         <input type="text" id="fullname" placeholder="John Doe" required>
         <div class="sexanddate">
         <div>
-        <label for="sex">Sex</label>
-        <select id="sex" required>
+        <label for="gender">Sex</label>
+        <select id="gender" required>
             <option value="" disabled selected>Sex</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -103,7 +96,7 @@
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="sample@email.com" required>
         <div  class="regbuttons">
-        <button type="submit">Submit</button>
+        <button type="submit" id="resgisterationbtn">Submit</button>
         <button type="button" onclick="closeModal()" style="background-color: beige;color: black;" >Cancel</button>
         </div>
          
@@ -116,7 +109,14 @@
         <p class="clicktosignin">Already have an account?...
         <a href="signin.html">Click here to sign in</a></p>
 </dialog>
- 
+
+
+
+
+
+
+    </main>
+    
 
    
      <section class="lastline">

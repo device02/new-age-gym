@@ -1,4 +1,3 @@
-
 const topnav = document.querySelector('.topnav');
 const calculate = document.getElementById('calculate');
 
@@ -143,3 +142,122 @@ function closeModal() {
         registermembership.classList.remove("closing");
     }, 300);
 }
+
+
+
+
+
+
+const SUPABASE_URL = "https://lantnoesejznwpoqcbjs.supabase.co";
+const SUPABASE_KEY = "sb_publishable_izQa6YYVUNTsxzq18NStJg_yR14WCrO";
+
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+
+
+const registrationForm = document.getElementById("registerationform");
+
+registrationForm.addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+    // Get values from the form
+    const memberClass = document.getElementById("class").value;
+    const fullName = document.getElementById("fullname").value;
+    const gender = document.getElementById("gender").value;
+    const startDate = document.getElementById("startdate").value;
+    const phoneNumber = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+
+
+    try {
+
+        // Insert member into Supabase
+        const { data, error } = await supabaseClient
+            .from("members")
+            .insert([
+                {
+                    // image is intentionally omitted
+
+                    class: memberClass,
+                    full_name: fullName,
+                    gender: gender,
+                    start_date: startDate,
+                    phone_number: phoneNumber,
+                    email: email,
+
+                    status: false
+
+                    // member_id is generated automatically
+                    // created_at is generated automatically
+                    // Date_of_birth is left NULL
+                    // Special_info is left NULL
+                }
+            ])
+            .select();
+
+
+        // Check Supabase error
+        if (error) {
+            throw error;
+        }
+
+
+        // Success
+        console.log("Member registered successfully:", data);
+
+        alert("Member registered successfully!");
+
+        registrationForm.reset();
+
+
+        // Close modal if your function exists
+        if (typeof closeModal === "function") {
+            closeModal();
+        }
+
+
+    } catch (error) {
+
+        console.error("Registration error:", error);
+
+        alert("Registration failed: " + error.message);
+    }
+
+});
+/*
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("JavaScript is loaded");
+
+    const registrationForm = document.getElementById("registerationform");
+
+    console.log("Form:", registrationForm);
+
+    registrationForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        console.log("SUBMIT BUTTON WAS CLICKED");
+
+        const memberClass = document.getElementById("class").value;
+        const fullName = document.getElementById("fullname").value;
+        const gender = document.getElementById("gender").value;
+        const startDate = document.getElementById("startdate").value;
+        const phoneNumber = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+
+        console.log("Class:", memberClass);
+        console.log("Name:", fullName);
+        console.log("Gender:", gender);
+        console.log("Start date:", startDate);
+        console.log("Phone:", phoneNumber);
+        console.log("Email:", email);
+
+    });
+
+});*/

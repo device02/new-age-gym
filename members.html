@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Age Gym/Members</title>
+    <link rel="stylesheet" href="newage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+    <header >
+        <div class="firstlink">
+            <a href="facebook.com">facebook</a>
+            <a href="instagram.com">Instagram</a>
+            <a href="x.com">Twitter</a>
+        </div>
+        <section class="gymappfirstsection">
+        <div class="topandnav">
+            <img class="logo" src="assets/gym2logo-removebg-preview.png">
+            <nav class="apptopnav">
+                <a href="index.html">Home</a>
+                                 <a href="signin.html">Sign Out</a>
+
+               
+                <button>🔔</button>
+                
+                <img src="assets/face.jpg">
+                <div>
+                <h3>Victor Ukaeke</h3>
+                <p>Boxing</p>
+
+              </div>
+                
+              <!--  <a class="whatsapp">whatsapp</a>-->
+            </nav>
+           
+            
+
+        </div>
+       
+    </header>
+   
+<main class="memberspage">
+    
+    <aside class="appsidenav">
+       <!--  <div class="hamburger" id="hamburger">
+                <div class="span1"></div>
+                <div class="span2"></div>
+                <div class="span3"></div>
+            </div>-->
+       
+        <ul>
+            <li><a href="dashboard.html"><img src="assets/dashboard.png">Dashboard</a></li>
+            <li><a href="members.html"><img src="assets/members (1).png">Members</a></li>
+            <li><a><img src="assets/payment.png">Payments</a></li>
+            
+            <li><a><img src="assets/plans.png">Plans</a></li>
+            
+            <li><a><img src="assets/report.png">Reports</a></li>
+            <li><a><img src="assets/setting.png">Settings</a></li>
+            <li><a>Staffs</a></li>
+            <li><a>Branches</a></li>
+        </ul>
+    </aside>
+    <section class="otherside">
+        <div class="membersmain">
+        <div>
+        <h2>Members</h2>
+        <p>Manage all gym members</p>
+        </div>
+        
+      
+            <a id="openmodal" onclick="openmodal()"><span>+ </span>Register New Member</a>
+
+       
+        </div>
+        <div class="filterarea">
+        <input type="search" placeholder="Serach by name or member ID">
+        <select>
+            <option >Plan</option>
+             <option>Weight Loss</option>
+              <option>Martial Art</option>
+               <option>Meditation & Yoga</option>
+                <option>Cardio</option>
+                <option>Boxing</option>
+        </select>
+        <select>
+            <option >All Status</option>
+            <option>Active</option>
+            <option>Inactive</option>
+        </select>
+        <button >Search</button>
+        </div>
+        <section class="tablecontainer">
+        <table class="datatable">
+            <tr class="tableheading">
+            <th>Member ID</th>
+            <th>Class</th>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            
+            <th>Status</th>
+            <th>Registration Date</th>
+            <th>Actions</th>
+            
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Weight Loss</td>
+                <td>Victor Ukaeke</td>
+                <td>Male</td>
+                <td>07062777839</td>
+               
+                <td id="activestatus" class="activestatus">Inactive</td>
+                <td>29 Sept 2026</td>
+                <td id="actionbuttons"><button>👁</button><button>✎</button><button style="color:red;background: none;">🗑 </button>
+</td>
+            </tr>
+        </table>
+        </section>
+    </section>
+</main>
+
+        
+<dialog class="registermembership">
+            <h2>Register Membership</h2>
+    <section class="registercontainer">
+     <aside class="memberaside">
+        <img src="assets/gym2logo-removebg-preview.png" alt="newage gym logo">
+        <h1 id="memberh1">SIGNUP</h1>
+       
+    </aside>
+    <button type="button" class="closemodal" onclick="closeModal()">&times;</button>
+    <form id="registerationform">
+
+                    <input type="file" id="profileimage" style="background-color: rgb(231, 55, 55); font-weight: bold;">
+
+            <input type="text" id="class" placeholder="Class" readonly>
+
+        
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="John Doe" required>
+        <div class="sexanddate">
+        <div>
+        <label for="gender">Sex</label>
+        <select id="gender" required>
+            <option value="" disabled selected>Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+        </select>
+        </div>
+        <div >
+        <label for="startdate">Start Date</label>
+        <input type="date" id="startdate" placeholder="Start Date" required>
+        </div>
+        </div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+234 123 456 7899" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="sample@email.com" required>
+        <div  class="regbuttons">
+        <button type="submit" id="resgisterationbtn">Submit</button>
+        <button type="button" onclick="closeModal()" style="background-color: beige;color: black;" >Cancel</button>
+        </div>
+         
+        
+    </form>
+   
+</section>
+
+
+        <p class="clicktosignin">Already have an account?...
+        <a href="signin.html">Click here to sign in</a></p>
+</dialog>
+
+
+
+
+
+
+    </main>
+    
+
+   
+     <section class="lastline">
+            <P>&copy; 2025 All Rights Reserved. </P>
+            <div style="display: flex; align-items: center;">
+            <img src="assets/gym2logo-removebg-preview.png"> 
+             <p class="lastname">NEWAGE</p>
+            </div>
+            <p >Powerd By: DoubleDevices</p>
+        </section>
+    <script src="newageapp.js"></script>
+</body>
+</html>

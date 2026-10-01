@@ -995,6 +995,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    display:flex;
 .memberspage{
     display: flex;
     flex-direction: row;
+    height: 100%;
     
 }
 .appsidenav{
@@ -1148,10 +1149,19 @@ background-color: rgb(157, 15, 15);
 }
 .apptopnav{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items:center;
+    background-color: rgb(103, 14, 11);
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem 1rem;
+    transform: translateY(1rem);
 
-
+}
+.apptopnav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 .apptopnav button{
     font-size: 2rem;
@@ -1165,7 +1175,18 @@ background-color: rgb(157, 15, 15);
 
 .dashboardcard{
     width:100%;
-    max-width: 17rem;
+    max-width: 20rem;
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    background-color: white;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+.dashboardcardtable{
+      width:100%;
+    max-width: 40rem;
     padding:1rem;
     display: flex;
     flex-direction: column;

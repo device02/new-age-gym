@@ -1,4 +1,22 @@
 
+const genderChart = document.getElementById("genderChart");
+
+new Chart(genderChart, {
+    type: "pie",
+
+    data: {
+        labels: ["Male", "Female"],
+
+        datasets: [{
+            data: [40, 60]
+        }]
+    },
+
+    options: {
+        responsive: true
+    }
+});
+
 
 
 function openmodal(){
@@ -71,6 +89,9 @@ function closeModal() {
         registermembership.classList.remove("closing");
     }, 300);
 }
+
+
+
 
 
 

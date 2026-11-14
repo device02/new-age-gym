@@ -54,7 +54,7 @@
 <button type="button" onclick="location.href='dashboard.html'">
     Log In
 </button>            <p style="color: rgb(246, 241, 241);" class="clicktosignin">Not a member?...
-        <a id="openmodal" onclick="openmodal()">Click here to sign up</a></p>
+        <a id="registerbtn" onclick="openmodal()">Click here to sign up</a></p>
         </form>
          
 
@@ -72,9 +72,15 @@
 
                     <input type="file" id="profileimage" style="background-color: rgb(231, 55, 55); font-weight: bold;">
 
-            <input type="text" id="class" placeholder="Class" readonly>
+            <select id="class" placeholder="Class">
+                <option value="" disabled selected>Class</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Martial Arts">Martial Arts</option>
+                <option value="Meditation & Yoga">Meditation & Yoga</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Boxing">Boxing</option>
+            </select>
 
-        
         <label for="fullname">Full Name</label>
         <input type="text" id="fullname" placeholder="John Doe" required>
         <div class="sexanddate">
@@ -127,6 +133,7 @@
             </div>
             <p >Powerd By: DoubleDevices</p>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="newage.js"></script>
 </body>
 </html>

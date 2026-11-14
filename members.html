@@ -93,34 +93,32 @@
         </select>
         <button >Search</button>
         </div>
+
         <section class="tablecontainer">
-        <table class="datatable">
+    <table class="datatable">
+
+        <thead>
             <tr class="tableheading">
-            <th>Member ID</th>
-            <th>Class</th>
-            <th>Full Name</th>
-            <th>Gender</th>
-            <th>Phone Number</th>
-            
-            <th>Status</th>
-            <th>Registration Date</th>
-            <th>Actions</th>
-            
+                <th>Member ID</th>
+                <th>Class</th>
+                <th>Full Name</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+                <th>Registration Date</th>
+                
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Weight Loss</td>
-                <td>Victor Ukaeke</td>
-                <td>Male</td>
-                <td>07062777839</td>
-               
-                <td id="activestatus" class="activestatus">Inactive</td>
-                <td>29 Sept 2026</td>
-                <td id="actionbuttons"><button>👁</button><button>✎</button><button style="color:red;background: none;">🗑 </button>
-</td>
-            </tr>
+        </thead>
+        <tbody id="memberstablebody">
+            <!-- Supabase members will appear here-->
+        </tbody>
         </table>
-        </section>
+    </section>
+
+
+        
+
+
     </section>
 </main>
 
@@ -138,8 +136,14 @@
 
                     <input type="file" id="profileimage" style="background-color: rgb(231, 55, 55); font-weight: bold;">
 
-            <input type="text" id="class" placeholder="Class" readonly>
-
+  <select id="class" placeholder="Class">
+                <option value="" disabled selected>Class</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Martial Arts">Martial Arts</option>
+                <option value="Meditation & Yoga">Meditation & Yoga</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Boxing">Boxing</option>
+            </select>
         
         <label for="fullname">Full Name</label>
         <input type="text" id="fullname" placeholder="John Doe" required>
@@ -193,6 +197,8 @@
             </div>
             <p >Powerd By: DoubleDevices</p>
         </section>
-    <script src="newageapp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+        <script src="newageapp.js"></script>
 </body>
 </html>

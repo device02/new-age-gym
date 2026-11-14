@@ -16,42 +16,37 @@
             <a href="instagram.com">Instagram</a>
             <a href="x.com">Twitter</a>
         </div>
-        <section class="gymappfirstsection">
+        <section class="gymappfirstsection">        
         <div class="topandnav">
             <img class="logo" src="assets/gym2logo-removebg-preview.png">
             <nav class="apptopnav">
+            <div  class="hamburger" id="hamburger">
+                <div class="span1"></div>
+                <div class="span2"></div>
+                <div class="span3"></div>
+            </div>
                 <a href="index.html">Home</a>
-                                 <a href="signin.html">Sign Out</a>
-
-               
-                <button>🔔</button>
-                
+                <a href="signin.html">Sign Out</a>                
                 <img src="assets/face.jpg">
-                <div>
+            <div>
+                <button>🔔</button>
                 <h3>Victor Ukaeke</h3>
                 <p>Boxing</p>
-
-              </div>
-                
-              <!--  <a class="whatsapp">whatsapp</a>-->
+            </div> 
             </nav>
-           
-            
-
-        </div>
+        </div>       
+        </section>
        
     </header>
    
 <main class="memberspage">
     
     <aside class="appsidenav">
-       <!--  <div class="hamburger" id="hamburger">
-                <div class="span1"></div>
-                <div class="span2"></div>
-                <div class="span3"></div>
-            </div>-->
+        
+       
        
         <ul>
+            
             <li><a href="dashboard.html"><img src="assets/dashboard.png">Dashboard</a></li>
             <li><a href="members.html"><img src="assets/members (1).png">Members</a></li>
             <li><a><img src="assets/payment.png">Payments</a></li>
@@ -65,6 +60,7 @@
         </ul>
     </aside>
     <section class="otherside">
+        
         <div class="membersmain">
         <div>
         <h2>Dashboard</h2>
@@ -72,21 +68,21 @@
         </div>
         </div>
         <div class="dashboardcardcontainer">
-        <div class="dashboardcard">
-            <h3>Total Members</h3>
-            <h3>1,200</h3>
+         <div style="background-color: rgb(94, 196, 207);" class="dashboardcard">
+            <p>Total Members</p>
+            <h3 style="font-size: 1.5rem; font-weight: bold;">1,200</h3>
             <p>+12% from last month</p>
             
         </div>
-         <div class="dashboardcard">
-            <h3>Active Members</h3>
-            <h3>1,200</h3>
+         <div style="background-color: rgb(106, 235, 158);" class="dashboardcard">
+            <p>Active Members</p>
+            <h3 style="font-size: 1.5rem; font-weight: bold;">1,200</h3>
             <p>+12% from last month</p>
             
         </div>
-         <div class="dashboardcard">
-            <h3>Expired Members</h3>
-            <h3>1,200</h3>
+         <div style="background-color: rgb(243, 152, 152);" class="dashboardcard">
+            <p>Expired Members</p>
+            <h3 style="font-size: 1.5rem; font-weight: bold;">1,200</h3>
             <p>+12% from last month</p>
             
         </div>
@@ -97,59 +93,67 @@
 </div>
 <div class="dashboardcardcontainer">
 
-    <div class="dashboardcard">
+    <div class="dashboardcardchart">
             <h3>Membership Distribution</h3>
-            <p>Weight Loss</p>
-            <p>Martial Arts</p>
-            <p>Meditation & Yoga</p>
-            <p>Weight Loss</p>
-            <p>Cardio</p>
-            <p>Boxing</p>
+            <div class="classchartcontainer">
+    <canvas id="classChart"></canvas>
+</div>
+            
 
             
         </div>
 
-         <div class="dashboardcard">
+         <div class="dashboardcardchart2">
+            
+
+                        <h3>Distribution by Gender</h3>
+      
+<div class="genderchartcontainer">
                         <canvas id="genderChart"></canvas>
 
-            <h3>Distribution by Gender</h3>
-            <p>Male 40%</p>
-            <p>Female 60%</p>
-
-            
-        </div>
+</div>
+            <p class="gender">Male <span>40%</span></p>
+            <p class="gender">Female <span>60%</span></p>
+            </div>
+           
         </div>
         <div class="dashboardcardcontainer">
 
                 <div class="dashboardcardtable">
+                    <div class="viewalldiv">
                 <h3>New Members</h3>
 
-                      <div class="tablecontainer">
-        <table class="datatable">
+                      <a href="members.html">View all</a>
+                      </div>
+                        <section class="tablecontainer">
+    <table class="datatable">
+
+        <thead>
             <tr class="tableheading">
-            
-            <th>Class</th>
-            <th>Full Name</th>
-            <th>Gender</th>
-             <th>Registration Date</th>
-                      
+                <th>ID</th>
+                <th>Class</th>
+                <th>Full Name</th>
+                <th>Gender</th>
+                
+                <th>Status</th>
+                <th>Registration Date</th>
+                
             </tr>
-            <tr>
-              
-                <td>Weight Loss</td>
-                <td>Victor Ukaeke</td>
-                <td>Male</td>
-               
-               
-                <td>29 Sept 2026</td>
-               
-</td>
-            </tr>
+        </thead>
+        <tbody id="memberstablebody">
+            <!-- Supabase members will appear here-->
+        </tbody>
         </table>
-    </div>
+    </section>
+
+   
                 </div>
                 <div class="dashboardcardtable">
+                <div class="viewalldiv">
                 <h3>New Payments</h3>
+
+                      <a href="members.html">View all</a>
+                      </div>
 
                       <div class="tablecontainer">
         <table class="datatable">
@@ -157,17 +161,15 @@
             
             <th>Class</th>
             <th>Full Name</th>
-            <th>Gender</th>
-             <th>Registration Date</th>
+            <th>Amunt</th>
+             <th>Date</th>
                       
             </tr>
             <tr>
               
                 <td>Weight Loss</td>
                 <td>Victor Ukaeke</td>
-                <td>Male</td>
-               
-               
+                <td>₦15,000</td>
                 <td>29 Sept 2026</td>
                
 </td>
@@ -177,6 +179,7 @@
                 </div>
         </div>
     </section>
+    
     </main>
     
 
@@ -189,7 +192,8 @@
             </div>
             <p >Powerd By: DoubleDevices</p>
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="newageapp.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 </html>

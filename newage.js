@@ -1,5 +1,6 @@
+//hamburgar
 const topnav = document.querySelector('.topnav');
-const calculate = document.getElementById('calculate');
+const hamburger = document.getElementById('hamburger');
 
 hamburger.addEventListener('click', () => {
     topnav.classList.toggle('show');
@@ -10,16 +11,15 @@ hamburger.addEventListener('click', () => {
 
 
 
+//Calculate
 
-
+const calculate = document.getElementById('calculate');
+ 
 
 if (calculate) {
 let weight = document.getElementById('weight');
 let height = document.getElementById('height');
 let bmidescription = document.getElementById('bmidescription');
-const hamburger = document.getElementById('hamburger');
-
-
 let bmi = document.getElementById('bmi');
 
 calculate.onclick = function() {
@@ -27,7 +27,11 @@ calculate.onclick = function() {
 let calcbmi = weight.value / (feetinft * feetinft);
     bmi.value = calcbmi.toFixed(2);
 
-   if (calcbmi < 18.5) {
+   if (weight.value==0 || height.value ==0){
+        bmidescription.textContent = 'Enter Correct Value';
+
+   }
+   else if(calcbmi < 18.5) {
       
         bmidescription.textContent = 'Underweight';
     } else if (calcbmi < 25) {
@@ -44,7 +48,7 @@ let calcbmi = weight.value / (feetinft * feetinft);
 }
 
 
-
+//scrolls
 const services = document.querySelectorAll(".scrolls");
 
 const observer = new IntersectionObserver((entries) => {
@@ -54,8 +58,8 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("active");
         } else {
-            entry.target.classList.remove("active");
-        }
+            return;
+      }
 
     });
 
@@ -70,7 +74,7 @@ services.forEach(service => {
 
 
 
-
+const registerbtn = document.getElementById("registerbtn");
 
 function openmodal(){
    
@@ -83,10 +87,7 @@ const martialartsbtn = document.getElementById("martialartsbtn");
 const yogameditationbtn = document.getElementById("yogameditationbtn");
 const cardiobtn = document.getElementById("cardiobtn");
 const boxingbtn = document.getElementById("boxingbtn");
-
-
 const memberh1 = document.getElementById("memberh1");
-
 const registermembership = document.querySelector(".registermembership");
 let classSelect = document.getElementById("class");
 
@@ -107,6 +108,7 @@ martialartsbtn.addEventListener("click", () => {
 
 });
 
+
 yogameditationbtn.addEventListener("click", () => {
    
    classSelect.value = "Meditation & Yoga";
@@ -122,6 +124,7 @@ cardiobtn.addEventListener("click", () => {
     memberh1.textContent = "CARDIO";
     registermembership.showModal();
 
+
 });
 
 boxingbtn.addEventListener("click", () => {
@@ -131,6 +134,7 @@ boxingbtn.addEventListener("click", () => {
     registermembership.showModal();
 
 });
+
 
 
 
@@ -147,7 +151,6 @@ function closeModal() {
 
 
 
-
 const SUPABASE_URL = "https://lantnoesejznwpoqcbjs.supabase.co";
 const SUPABASE_KEY = "sb_publishable_izQa6YYVUNTsxzq18NStJg_yR14WCrO";
 
@@ -157,20 +160,72 @@ const supabaseClient = supabase.createClient(
 );
 
 
+const registrationform = document.getElementById("registerationform");
 
-const registrationForm = document.getElementById("registerationform");
+if (registrationform) {
 
+    registrationform.addEventListener("submit", async function(e) {
+
+        e.preventDefault();
+
+        const fullname = document.getElementById("fullname").value;
+        const gender = document.getElementById("gender").value;
+        const startdate = document.getElementById("startdate").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const classname = document.getElementById("class").value;
+
+
+        const { data, error } = await supabaseClient
+            .from("members01")
+            .insert([
+                {
+                    class: classname,
+                    full_name: fullname,
+                    gender: gender,
+                    start_date: startdate,
+                    phone_number: phone,
+                    email: email
+                }
+            ])
+            .select();
+
+
+        if (error) {
+
+            console.error(error);
+            alert("Registration failed: " + error.message);
+
+        } else {
+
+            console.log(data);
+            alert("Member registered successfully!");
+
+            registrationform.reset();
+
+            closeModal();
+        }
+
+    });
+
+}
+
+/*Registration form submit
+
+const registerationform = document.getElementById("registerationform");
+
+if (registerationform){
 registrationForm.addEventListener("submit", async function (event) {
 
     event.preventDefault();
 
     // Get values from the form
-    const memberClass = document.getElementById("class").value;
-    const fullName = document.getElementById("fullname").value;
+    const memberClass = document.getElementById("class").value.trim();
+    const fullName = document.getElementById("fullname").value.trim();
     const gender = document.getElementById("gender").value;
     const startDate = document.getElementById("startdate").value;
-    const phoneNumber = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
+    const phoneNumber = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
 
 
     try {
@@ -189,7 +244,7 @@ registrationForm.addEventListener("submit", async function (event) {
                     phone_number: phoneNumber,
                     email: email,
 
-                    status: false
+                   
 
                     // member_id is generated automatically
                     // created_at is generated automatically
@@ -228,6 +283,8 @@ registrationForm.addEventListener("submit", async function (event) {
     }
 
 });
+
+}
 /*
 
 document.addEventListener("DOMContentLoaded", function () {
